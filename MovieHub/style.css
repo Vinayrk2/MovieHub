@@ -1,0 +1,383 @@
+*{
+	margin:0;
+	padding:0;
+	box-sizing: border-box;
+	overflow-x: hidden;
+
+}
+body{
+	height:100vh;
+	width:100vw;
+	background: rgb(194,188,188);
+}
+
+	/*PRELOADER SECTION*/
+
+	#preloader{
+		height: 100%;
+		width:100%;
+		position:absolute;
+		top:0; left:0;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		background-color: black;
+		opacity: 0.6;
+	}
+	.load{
+		height: 50px;
+		width:50px;
+		opacity: 1;
+		background-color:red;
+		animation-name: loading;
+		animation-duration: 1.5s;
+		animation-iteration-count: infinite;
+		animation-timing-function: linear;
+	}
+
+	@keyframes loading{
+		0%{ transform:rotate(0deg); }
+		100%{ transform:rotate(360deg); }
+	}
+	/*HEADER SECTION*/
+
+header button{
+	background: transparent;
+	border:none;
+	margin-left:5%;
+/*	margin-top: 4%;*/
+	margin-right: 2%;
+	color:white;
+	font-weight: bolder;
+}
+header{
+	height:10%;
+	width:100%;
+	background: black;
+	padding-top:1%;
+	padding-left: 2%;
+	font-family: 'Oswald', sans-serif;
+	box-sizing: border-box;
+	position: relative;
+	overflow-y: hidden;
+}
+#logoContainer{
+	float: left;
+	color:white;
+}
+#logoContainer img{
+	height:90%;
+	width:80px;
+}
+#options{
+	height: auto;
+	width:70px;
+	padding:4px;
+	display: block;
+	background-color: red;
+	position: absolute;
+	top:50px; left:400px;
+/*	display: none;*/
+}
+#btnContainer{
+	float: right;
+	width:45%;
+}
+button:hover{
+	cursor: pointer;
+}
+
+#scrollDiv{
+	position:fixed;
+	bottom:50px;
+	right:50px;
+	height: 50px;
+	width:50px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-image: url("https://www.bing.com/th/id/OGC.bc475cb6531e89e270dee6a211033828?pid=1.7&rurl=https%3a%2f%2fi.pinimg.com%2foriginals%2f1c%2f22%2f06%2f1c2206a586c7b42999403ebf7d25ff4e.gif&ehk=HqkI04EGll5pw4ETuuAL6H9EXkcqPkPAV9fr%2bGl%2f3R4%3d");
+	background-position: center;
+	background-size: cover;
+	border-radius: 50%;
+}
+#scrollDiv a{ color:white; }
+
+	/*BODY SECTION*/
+
+main{
+	height:auto;
+	width:100%;
+}
+#slideBar{
+	height: 90vh;
+	width:100%;
+	background-image: url("https://images.pexels.com/photos/1097456/pexels-photo-1097456.jpeg?auto=compress&cs=tinysrgb&w=600");
+	background-size: cover;
+	background-position: center;
+}
+
+#scrollDown{
+	width: 100%;
+	text-align: center;
+	color:white;
+	text-decoration: none;
+	position:relative;
+	top:90%;
+	font-size: 25px;
+	animation-name: scroll;
+	animation-duration: 3s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+}
+@keyframes scroll{
+	0%{
+		top:85%;
+	}
+	45%{
+		top:90%;
+	}
+	50%{
+		top:90%;
+	}
+	100%{
+		top:85%;
+	}
+}
+
+	/*ABOUT SECTION*/
+
+#aboutus{
+	height: 90vh;
+	margin-top: 20px;
+	box-shadow: 0px 7px 8px 4px rgba(153,152,152,0.73);
+	width:90vw;
+	margin-left:5vw;
+	display: flex;
+	flex-direction: row;
+	padding: 5%;
+	background: white;
+}
+#chartNums{ display: inline-table;  }
+#aboutImage{
+	display: flex;
+	justify-content: center;
+/*	align-items: center;*/
+	width:60%;
+}
+#aboutImage img{
+	width:80%;
+	height:300px;
+}
+#description{
+	padding:10px;
+	width:50%;
+}
+#contact {
+	height: 100%;
+	width:20%;
+}
+#contact ul li{
+	margin:5px;
+	text-align: center;
+}
+#chartNums{
+	position:relative;
+	top:50%;
+	width:100%;
+	display: flex;
+}
+#chartNums div{
+	flex-basis: 33%;
+}
+li i{
+	font-size: 25px;
+
+}
+
+.Heading{
+	margin-top:20px;
+	outline: 4px 2px 4px 10px gray;
+}
+	
+	/*	MOVIE SECTION*/
+
+#marvel,#DC,#bollywood,#contactus{
+	height: 95vh;
+	width:90%;
+	margin-left: 5%;
+	margin-top: 20px;
+	box-shadow: 0px 1px 8px 4px rgba(153,152,152,0.73);
+	display: inline-flex;
+	margin-bottom: 10px;
+	background: white;
+	padding-top:30px;
+}
+.movieName{
+	font-weight: bolder;
+	text-align: center;
+}
+.Heading{
+	width:30%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.movieContainer{
+	width:60%;
+	margin-left: 5%;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: repeat(2, 1fr);
+	text-align: center;
+}
+.movieImage{
+	height:85%;
+	overflow: hidden;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+section .movieBox img{
+	width:60%;
+	margin-left:15%;
+	transition: filter,transform 0.2s linear;
+	
+	filter: grayscale(100%);
+	filter: drop-shadow(1px 2px 5px rgb(161,154,154));
+}
+
+section .movieBox img:hover{
+	filter: grayscale(0%);
+	transform: scale(1.1);
+}
+
+
+	/*CONTACT US PART*/
+
+	#contactus{
+		display: flex;
+		justify-content: center;
+		flex-direction: column;
+	}
+	form{
+		height: 70%;
+		width:60%;
+		margin-left:20%;
+		display: flex;
+		flex-wrap: wrap;
+		margin-top: 20px;
+	}
+	form div{
+		padding-left: 10%;
+		width:50%;	}
+	form div label{
+		width:100%;
+	}
+	#cont_description{
+		width:100%;
+	}
+	#cont_description textarea{
+		width:90%;
+		height: 150px;
+	}
+	form input, form button{
+		width:80%;
+		height: 32px;
+		font-size: 16px;
+	}
+	#subject{
+		width:95.5%;
+	}
+	#cont_btn{
+		margin-left: 10%;
+		width:70%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+		
+	@media(max-width:800px){
+		#marvel,#DC,#bollywood,#contactus{
+			height:auto;
+			display: grid;
+			grid-template-columns: repeat(1, 1fr);
+			grid-template-rows: auto;
+		}
+		.Heading{
+			width:100%;
+			margin-bottom: 20px;
+		}
+		section .movieBox img{
+			margin-left:0%;
+		}
+		.movieContainer{
+			display: flex;
+			flex-direction: column;
+			width:100%;
+			justify-content: center;
+		}
+		form,form div{
+			width:100%;
+			height: auto;
+			padding:0;
+		}
+		form div input{
+			width:60%;
+		}
+		#cont_description{
+			width:70%;
+		}
+		#cont_btn{
+			margin:0; padding: 0;
+		}
+		#aboutus{
+			display: block;
+			height: 91vh;
+		}
+		#description{
+			height: 500px;
+			margin-top:20px;
+			margin-bottom: 50px;
+			
+		}
+		#chartNums{
+			margin-top: 20px;
+		}
+		#aboutus div{
+			width:100%;
+			height: auto;
+		}
+	}
+
+	/* EXTRA SECTIONS  */
+
+	#profileDiv{
+		height:100vh;
+		width:100vw;
+/*		background-color: white;*/
+		position:absolute;
+		top:0; left: 0;
+		display: flex;
+		justify-content: center;	
+		align-items: center;
+/*		opacity:0.6;*/
+		display:none;
+	}
+	#proDetails,#proDetails form,#proDetails form table{
+		height: 350px;
+		width:350px;
+		margin:0; padding:0;
+	}
+	#proDetails{
+		background-color: white;
+	}
+	td{
+		width:50%;
+		height: auto;
+		padding-left:5px;
+	}
+	td input{
+		width:90%;
+	}
+
